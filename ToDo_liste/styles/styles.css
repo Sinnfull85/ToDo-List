@@ -1,0 +1,27 @@
+/* Marwa Versuch*/
+.mv-todo {
+    background-color: aliceblue;
+
+    display: flex;
+    justify-content: space-around;
+    width: 600px;
+    margin: 1px auto;
+}
+
+ul {
+    background-color: antiquewhite;
+    width: 50%;
+    height: 100%;
+}
+.mv-edit {
+    background-color: rgb(65, 237, 94);
+}
+
+.mv-delete {
+    background-color: red;
+}
+
+.mv-button-div {
+    display: flex;
+    align-items: center;
+}
