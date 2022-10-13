@@ -11,6 +11,11 @@ const listContainer = document.createElement('div');
 listContainer.setAttribute('id', "divToDo");
 const list = document.createElement('ul');
 const li = document.createElement('li');
+const details = document.createElement('details');
+const datetime = document.createElement('div');
+datetime.setAttribute('id', "datetime");
+datetime.innerHTML ="Datum: ";
+
 li.innerText = "ToDO-Item";
 
 
@@ -19,6 +24,8 @@ li.innerText = "ToDO-Item";
     APP.appendChild(listContainer,);
     listContainer.appendChild(list);
     list.appendChild(li);
+    li.appendChild(details);
+    li.appendChild(datetime);
 
     listContainer.style.height = "50px";
     listContainer.style.width = "60vw";
