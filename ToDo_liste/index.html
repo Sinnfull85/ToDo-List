@@ -6,32 +6,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/styles.css">
-    <title>ToDo-Liste</title>
+    <title>ToDO-Liste</title>
 </head>
 
 <body>
 
+
     <header>
-        <div id="header">
-            <h1>TO DO LISTE</h1>
-        </div>
+
+
+
+
     </header>
-
     <main>
-        <section id="main_body">
-            <div id="Datum">Donnerstag, 13. Oktober 2022</div>
 
-            <div class="add_tasks">Aufgabe hinzufügen</div>
-
-            <div id="task">Augabe
-                <div class="Titel1">Titel1</div>
-                <div class="Titel2">Titel2</div>
-            </div>
-
-            <div id="all_delete">Alle Löschen</div>
-
-
-        </section>
 
 
 
@@ -44,12 +32,21 @@
 
         </div>
 
-        <button id="AddButton">Add ToDo</button>
+
+
+
+
+
 
 
         <div class="mv-todo" id="mv-todo-1">
+
             <ul class="mv-ul">
-                <li>Einkaufen</li>
+
+                <li>Einkaufen
+                    <details>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor, ratione!</details>
+                    <div id="date">Datum:</div>
+                </li>
             </ul>
             <div class="mv-button-div">
                 <button class="mv-edit" id="mv-edit-1">Bearbeiten</button>
@@ -59,14 +56,29 @@
         </div>
         <div class="mv-todo" id="mv-todo-2">
             <ul class="mv-ul">
-                <li>Kochen</li>
+                <li>Kochen
+                    <details id="details-">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae,
+                        repellat?</details>
+                    <div id="date">Datum:</div>
+                </li>
+
             </ul>
             <div class="mv-button-div">
                 <button class="mv-edit" id="mv-edit-2">Bearbeiten</button>
                 <button class="mv-delete" id="mv-delete-2">Löschen</button>
             </div>
 
+
+
         </div>
+
+        <div id="add-section" style="text-align:center ;margin:20px;">
+            <input id="addInput" type="text" placeholder="Aufgabe Titel">
+            <input id="details" type="text" placeholder="Mehr Details">
+            <input id="datetime" type="datetime" placeholder="Datum/Uhrzeit">
+            <button id="AddButton">Hinzufügen</button>
+        </div>
+
 
 
 
@@ -87,9 +99,7 @@
     <footer>
 
 
-        <div id="erledigt">Erledigt
-            <div class="done_tasks">Titel</div>
-        </div>
+
 
 
 
