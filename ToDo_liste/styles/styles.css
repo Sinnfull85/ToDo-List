@@ -25,3 +25,21 @@ ul {
     display: flex;
     align-items: center;
 }
+
+button {
+    float:right;
+    margin-right:10px;
+
+}
+
+ul, li {
+    background-color: antiquewhite;
+    margin:10px;
+    
+}
+
+#divToDO{
+    background-color: aliceblue;
+    height:1000px;
+    width:600px;
+}
