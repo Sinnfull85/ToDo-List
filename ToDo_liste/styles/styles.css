@@ -27,19 +27,22 @@ ul {
 }
 
 button {
-    float:right;
-    margin-right:10px;
+    margin:10px;
 
 }
 
 ul, li {
-    background-color: antiquewhite;
     margin:10px;
     
 }
 
-#divToDO{
+#divToDo{
     background-color: aliceblue;
-    height:1000px;
-    width:600px;
+    margin:auto;
+    border:1px solid black;
+}
+
+li{
+    background-color: antiquewhite;
+
 }
