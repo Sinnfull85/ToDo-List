@@ -1,5 +1,20 @@
 const APP = document.getElementById('App');
 const AddButton = document.getElementById('AddButton');
+const input = document.getElementById('addInput');
+
+
+
+let inputList = [];
+
+function handleInput(event){
+    const newInput = event.target.value;
+    inputList.push(newInput);
+    input.value ="";
+    console.log()
+}
+
+
+input.addEventListener("change", handleInput);
 
 
 AddButton.addEventListener('click', handleButtonClick);
@@ -13,10 +28,23 @@ const list = document.createElement('ul');
 const li = document.createElement('li');
 const details = document.createElement('details');
 const datetime = document.createElement('div');
+
+const editBtn = document.createElement('button');
+const deleteBtn = document.createElement('button');
+
+editBtn.innerHTML ="Bearbeiten";
+deleteBtn.innerHTML ="Löschen";
+
+editBtn.setAttribute('id', "mv-edit-2");
+deleteBtn.setAttribute('id', "mv-delete-2");
+
+
+
 datetime.setAttribute('id', "datetime");
 datetime.innerHTML ="Datum: ";
 
 li.innerText = "ToDO-Item";
+
 
 
     console.log("button clicked");
@@ -26,11 +54,9 @@ li.innerText = "ToDO-Item";
     list.appendChild(li);
     li.appendChild(details);
     li.appendChild(datetime);
-
-    listContainer.style.height = "50px";
-    listContainer.style.width = "60vw";
-    listContainer.style.border = "1px solid black";
-
+    listContainer.appendChild(editBtn);
+    listContainer.appendChild(deleteBtn);
+    
 }
 
 
