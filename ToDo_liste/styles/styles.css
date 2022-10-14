@@ -1,17 +1,17 @@
-body{
-    font-family: 'Courier New', Courier, monospace;
+body {
+    font-family: "Courier New", Courier, monospace;
 }
 
-header, #App{
-        text-align: center;
+header,
+#App {
+    text-align: center;
 }
 
-header p{
+header p {
     font-style: italic;
-
 }
 
-.mv-todo {
+.divToDo {
     background-color: aliceblue;
     display: flex;
     justify-content: space-around;
@@ -19,51 +19,49 @@ header p{
     margin: 1px auto;
 }
 
-ul {
-    background-color: antiquewhite;
+.divToDo li {
+    background-color: rgb(199, 118, 13);
     width: 50%;
     height: 100%;
+    list-style: none;
 }
-.mv-edit {
+.edit {
     background-color: rgb(65, 237, 94);
 }
 
-.mv-delete {
+.delete {
     background-color: red;
 }
 
-.mv-button-div {
+.divButton {
     display: flex;
     align-items: center;
-
 }
 
-button {
-    float:right;
-    margin-right:10px;
-
+.edit {
+    float: right;
+    margin-right: 10px;
 }
 
-ul, li {
+.divToDo ul,
+.divToDo li {
     background-color: antiquewhite;
-    margin:10px;
-    width:50%;
-    margin:auto;
-    height:50px;
+    margin: 10px;
+    width: 50%;
+    margin: auto;
+    height: 50px;
 }
 
-#divToDO{
+.divToDO {
     background-color: aliceblue;
-    height:1000px;
-    width:600px;
+    height: 1000px;
+    width: 600px;
 }
 
-#li-als-input{
-
+.li-als-input {
     background-color: transparent;
-    color:black;
+    color: black;
     border: 0px;
     pointer-events: none;
-    padding:15px;
-
+    padding: 15px;
 }
