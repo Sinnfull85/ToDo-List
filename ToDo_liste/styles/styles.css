@@ -26,11 +26,17 @@ ul {
 }
 .mv-edit {
     background-color: rgb(65, 237, 94);
-    margin:10px;
+    margin: 0px 10px;
+    border-radius:3px;
+    border: 1px solid black;
+    padding:5px;
 }
 
 .mv-delete {
     background-color: red;
+    border-radius:3px;
+    border: 1px solid black;
+    padding:5px;
 }
 .mv-delete:hover {
     background-color: rgb(106, 17, 17);
@@ -44,6 +50,7 @@ ul {
 .mv-button-div {
     display: flex;
     align-items: center;
+    margin:10px;
 
 }
 
