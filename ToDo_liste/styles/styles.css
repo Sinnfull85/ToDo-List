@@ -27,22 +27,27 @@ ul {
 }
 
 button {
-    margin:10px;
+    float:right;
+    margin-right:10px;
 
 }
 
 ul, li {
+    background-color: antiquewhite;
     margin:10px;
     
 }
 
-#divToDo{
+#divToDO{
     background-color: aliceblue;
-    margin:auto;
-    border:1px solid black;
+    height:1000px;
+    width:600px;
 }
 
-li{
-    background-color: antiquewhite;
+#li-als-input{
+
+    background-color: transparent;
+    border: 0px;
+    pointer-events: none;
 
 }
