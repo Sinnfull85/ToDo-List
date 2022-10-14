@@ -24,7 +24,9 @@ function handleButtonClick() {
     liAlsInput.setAttribute("id", "li-als-input");
 
     const editBtn = document.createElement("button");
+    editBtn.setAttribute("class", "mv-edit");
     const deleteBtn = document.createElement("button");
+    deleteBtn.setAttribute("class", "mv-delete");
 
     editBtn.innerHTML = "Bearbeiten";
     deleteBtn.innerHTML = "Löschen";
