@@ -33,6 +33,30 @@ input.addEventListener("change", handleInput);
 // datetimeInput.addEventListener("change", handleInput3);
 
 AddButton.addEventListener("click", handleButtonClick);
+input.addEventListener("keydown", addOnEnter);
+
+
+
+
+
+
+//Add Elements on "Enter" ?? 
+function addOnEnter(e, handleInput, handleButtonClick){
+    if (e.key === 'Enter') {
+        // code for enter
+        console.log("test");
+      }
+
+      handleInput;
+      handleButtonClick;
+
+}
+
+
+
+
+
+
 
 function handleButtonClick() {
     const listContainer = document.createElement("div");
