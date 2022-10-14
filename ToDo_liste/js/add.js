@@ -1,8 +1,8 @@
 const APP = document.getElementById("App");
 const AddButton = document.getElementById("AddButton");
 const input = document.getElementById("addInput");
-const detailsInpt = document.getElementById("details");
-const datetimeInput = document.getElementById("datetime");
+// const detailsInpt = document.getElementById("details");
+// const datetimeInput = document.getElementById("datetime");
 
 let inputList = [];
 
@@ -29,8 +29,8 @@ function handleInput3(event) {
 }
 input.addEventListener("change", handleInput);
 
-detailsInpt.addEventListener("change", handleInput2);
-datetimeInput.addEventListener("change", handleInput3);
+// detailsInpt.addEventListener("change", handleInput2);
+// datetimeInput.addEventListener("change", handleInput3);
 
 AddButton.addEventListener("click", handleButtonClick);
 
@@ -39,10 +39,13 @@ function handleButtonClick() {
     listContainer.setAttribute("id", "divToDo");
     const list = document.createElement("ul");
     const li = document.createElement("li");
-    const details = document.createElement("details");
-    const summary = document.createElement("summary");
+    const liAlsInput = document.createElement("input");
+    liAlsInput.setAttribute("id", "li-als-input");
 
-    const datetime = document.createElement("div");
+    // const details = document.createElement("details");
+    // const summary = document.createElement("summary");
+
+    // const datetime = document.createElement("div");
 
     const editBtn = document.createElement("button");
     const deleteBtn = document.createElement("button");
@@ -53,27 +56,28 @@ function handleButtonClick() {
     editBtn.setAttribute("id", "mv-edit-2");
     deleteBtn.setAttribute("id", "mv-delete-2");
 
-    datetime.setAttribute("id", "datetime");
+    // datetime.setAttribute("id", "datetime");
 
-    li.innerText = inputList[inputList.length - 1];
-    summary.innerText = inputList2[inputList2.length - 1];
-    datetime.innerHTML = inputList3[inputList2.length - 1];
+    liAlsInput.value = inputList[inputList.length - 1];
+    console.log("GHfdj", inputList[inputList.length - 1]);
+    // summary.innerText = inputList2[inputList2.length - 1];
+    // datetime.innerHTML = inputList3[inputList2.length - 1];
     console.log("button clicked");
 
     input.value = "";
 
-    detailsInpt.value = "";
-    datetimeInput.value = "";
+    // detailsInpt.value = "";
+    // datetimeInput.value = "";
 
     APP.appendChild(listContainer);
     listContainer.appendChild(list);
     list.appendChild(li);
-    details.appendChild(summary);
-    li.appendChild(details);
-    li.appendChild(datetime);
+    // details.appendChild(summary);
+    li.appendChild(liAlsInput);
+    // li.appendChild(details);
+    // li.appendChild(datetime);
     listContainer.appendChild(editBtn);
     listContainer.appendChild(deleteBtn);
 }
 
 // ToDO Array
-const ToDos = ["wert1", "wert2", "wert3", "wert4", "wert5"];

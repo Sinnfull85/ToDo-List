@@ -43,3 +43,11 @@ ul, li {
     height:1000px;
     width:600px;
 }
+
+#li-als-input{
+
+    background-color: transparent;
+    border: 0px;
+    pointer-events: none;
+
+}
