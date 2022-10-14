@@ -26,10 +26,19 @@ ul {
 }
 .mv-edit {
     background-color: rgb(65, 237, 94);
+    margin:10px;
 }
 
 .mv-delete {
     background-color: red;
+}
+.mv-delete:hover {
+    background-color: rgb(106, 17, 17);
+    color:white;
+}
+.mv-edit:hover {
+    background-color:  rgb(34, 118, 48);
+    color:white;
 }
 
 .mv-button-div {
@@ -40,8 +49,7 @@ ul {
 
 button {
     float:right;
-    margin-right:10px;
-
+    cursor:pointer;
 }
 
 ul, li {
@@ -66,4 +74,16 @@ ul, li {
     pointer-events: none;
     padding:15px;
 
+}
+
+input{
+    width:100%;
+    padding:10px;
+}
+
+#add-section{
+    margin:auto;
+    width:40%;
+    display: flex;
+    justify-content: flex-end;
 }
