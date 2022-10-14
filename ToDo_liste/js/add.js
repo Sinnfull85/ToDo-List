@@ -55,7 +55,9 @@ function handleButtonClick() {
 
 
     const editBtn = document.createElement("button");
+    editBtn.setAttribute("class", "mv-edit");
     const deleteBtn = document.createElement("button");
+    deleteBtn.setAttribute("class", "mv-delete");
 
 
 

@@ -47,6 +47,7 @@ ul, li {
 #li-als-input{
 
     background-color: transparent;
+    color:black;
     border: 0px;
     pointer-events: none;
 
