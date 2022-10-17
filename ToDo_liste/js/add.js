@@ -7,7 +7,7 @@ let inputList = [];
 // beispiel
 // let inputList_v1 = ["kaufen", "Kochen"];
 // let inputList_v2 = [
-//     { aufgabe: "kaufen", zeit: "" },
+//     { aufgabe: "kaufen" },
 //     { aufgabe: "Kochen" },
 //     { aufgabe: "spielen" },
 // ];

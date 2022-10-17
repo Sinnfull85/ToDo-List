@@ -14,26 +14,19 @@
 
     <header>
         <h1>ToDo-Liste</h1>
-        <p>WochenProjekt#3 "ToDo-Liste" , Gruppe 3: Marwa, Andrea und Denis. -WBS Coding School WDG007, Instructor
+        <p>WochenProjekt#3 "ToDo-Liste" , Gruppe 3: Marwa, Andreas und Denis. -WBS Coding School WDG007, Instructor
             "Peter Wolf"</p>
 
     </header>
     <main>
 
-
-
-
-
-
-
-
         <section id="App">
             <div id="add-section" style="text-align:center ;margin:20px;">
-                <input id="neuTodo" type="text" placeholder="Aufgabe Titel">
+                <input id="neuTodo" name="neuToDo" type="text" placeholder="Aufgabe Titel">
                 <!-- FÜR SPÄTER -->
                 <!-- <input id="details" type="text" placeholder="Mehr Details">
                     <input id="datetime" type="datetime" placeholder="Datum/Uhrzeit"> -->
-                <button id="addTodo">Hinzufügen</button>
+                <button onclick="save_data()" id="addTodo" value="addToDo" type="button">Hinzufügen</button>
             </div>
             <ul id="todoList">
 

@@ -1,5 +1,3 @@
-const KEY_ENTER = 13;
-
 document.addEventListener("DOMContentLoaded", () => {
     const APP = document.getElementById("App");
 
@@ -7,50 +5,64 @@ document.addEventListener("DOMContentLoaded", () => {
     const addTodo = document.getElementById("addTodo");
     const todoList = document.getElementById("todoList");
 
-    addTodo.addEventListener("click", handleButtonClick);
+    // let m_todoList =[];
 
-    function handleButtonClick() {
-        if (newTodo.value !== "") {
-            const liElement = document.createElement("li");
-            const divContainer = document.createElement("div");
+    // addTodo.addEventListener("click", handleButtonClick);
 
-            const inputCheckbox = document.createElement("input");
-            const toDoText = document.createElement("label");
+    let add_button = document.getElementById("addTodo");
+    add_button.onclick = saveData;
 
-            const divButton = document.createElement("div");
-            const editBtn = document.createElement("button");
-            const deleteBtn = document.createElement("button");
-
-            deleteBtn.innerHTML = "Löschen";
-            editBtn.innerHTML = "Bearbeiten";
-            deleteBtn.classList.add("delete");
-            editBtn.classList.add("edit");
-
-            toDoText.innerText = newTodo.value;
-
-            inputCheckbox.type = "checkbox";
-
-            divContainer.classList.add("divToDo");
-            liElement.classList.add("liElement");
-
-            divButton.appendChild(editBtn);
-            divButton.appendChild(deleteBtn);
-
-            divContainer.appendChild(inputCheckbox);
-            divContainer.appendChild(toDoText);
-            divContainer.appendChild(divButton);
-
-            liElement.appendChild(divContainer);
-            console.log(liElement);
-            todoList.appendChild(liElement);
-
-            newTodo.value = "";
-        }
+    function saveData() {
+        let input = document.getElementById("neuToDo");
+        localStorage.setItem("neuToDo", input.value);
+        var storedValue = localStorage.getItem("neuToDo");
     }
 
-    newTodo.addEventListener("change", (event) => {
-        if (newTodo.value !== "") {
-            console.log(newTodo.value);
-        }
-    });
+    // function handleButtonClick() {
+    //     if (newTodo.value !== "") {
+    //         const liElement = document.createElement("li");
+    //         const divContainer = document.createElement("div");
+
+    //         const inputCheckbox = document.createElement("input");
+    //         const toDoText = document.createElement("label");
+
+    //         const divButton = document.createElement("div");
+    //         const editBtn = document.createElement("button");
+    //         const deleteBtn = document.createElement("button");
+
+    //         deleteBtn.innerHTML = "Löschen";
+    //         editBtn.innerHTML = "Bearbeiten";
+    //         deleteBtn.classList.add("delete");
+    //         editBtn.classList.add("edit");
+
+    //         //m_todoList.push(newTodo.value);
+    //         toDoText.innerText = newTodo.value;
+
+    //         inputCheckbox.type = "checkbox";
+
+    //         divContainer.classList.add("divToDo");
+    //         liElement.classList.add("liElement");
+
+    //         divButton.appendChild(editBtn);
+    //         divButton.appendChild(deleteBtn);
+
+    //         divContainer.appendChild(inputCheckbox);
+    //         divContainer.appendChild(toDoText);
+    //         divContainer.appendChild(divButton);
+
+    //         liElement.appendChild(divContainer);
+    //         console.log(liElement);
+    //         todoList.appendChild(liElement);
+
+    //         newTodo.value = "";
+
+    //         //
+    //     }
+    // }
+
+    // newTodo.addEventListener("change", (event) => {
+    //     if (newTodo.value !== "") {
+    //         console.log(newTodo.value);
+    //     }
+    // });
 });
