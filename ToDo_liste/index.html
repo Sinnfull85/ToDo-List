@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 
 <head>
     <meta charset="UTF-8">
@@ -27,11 +27,11 @@
                 <!-- <input id="details" type="text" placeholder="Mehr Details">
                     <input id="datetime" type="datetime" placeholder="Datum/Uhrzeit"> -->
                 <!-- <button onclick="save_data()" id="addTodo" value="addToDo" type="button">Hinzufügen</button> -->
-                <button id="addTodo" value="addToDo" type="button">Hinzufügen</button> -->
+                <button id="addTodo" value="addToDo" type="button">Hinzufügen</button>
             </div>
-            <ul id="todoList">
+            <ul id="todoList" class="todoList">
 
-                <li class="liElement">
+                <!-- <li class="liElement completed">
                     <div class="divToDo">
                         <input class="checkInput" type="checkbox" checked>
                         <label class="todoText">Taste JavaScript</label>
@@ -41,9 +41,21 @@
                         </div>
                     </div>
 
-                </li>
+                </li> -->
 
             </ul>
+
+            <div class="divFilter">
+                <span class="todoCount">Aufgabe : <strong>0</strong> </span>
+                <ul class="filters">
+
+                    <li>
+                        <a href="#/completed">Completed</a>
+                    </li>
+                </ul>
+            </div>
+
+
 
 
         </section>

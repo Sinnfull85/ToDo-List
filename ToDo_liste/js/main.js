@@ -5,9 +5,54 @@ document.addEventListener("DOMContentLoaded", () => {
     const addTodo = document.getElementById("addTodo");
     const todoList = document.getElementById("todoList");
 
+    const divFilter = document.querySelector(".divFilter");
+    const todoCountElement = document.querySelector(".todoCount strong");
+
     let m_todoList = [{ name: "Javascript lernen" }];
 
-    addTodo.addEventListener("click", handleButtonClick);
+    const verifyTodoList = () => {
+        if (todoList.children.length === 0) {
+            console.log("todoList.children.length", todoList.children.length);
+            divFilter.style.display = "none";
+        } else {
+            divFilter.style.display = "";
+        }
+
+        let todoCounter = 0;
+        for (const item of todoList.children) {
+            // console.log(item.classList.contains("completed")); //return true oder false
+            if (!item.classList.contains("completed")) {
+                todoCounter++;
+            }
+        }
+        todoCountElement.innerText = todoCounter;
+    };
+
+    verifyTodoList();
+    const doneDeletetask = (liElement) => {
+        const checkboxElement = liElement.querySelector(".checkInput");
+        const deleteButtonElement = liElement.querySelector(".delete");
+
+        // console.log("liElement", liElement.innerText);
+
+        checkboxElement.addEventListener("change", () => {
+            // console.log("changed!");
+            if (checkboxElement.checked) {
+                liElement.classList.add("completed");
+                // console.log("liElement", liElement);
+                verifyTodoList();
+            } else {
+                liElement.classList.remove("completed");
+                // console.log("remove completed liElement", liElement);
+                verifyTodoList();
+            }
+        });
+
+        deleteButtonElement.addEventListener("click", () => {
+            liElement.remove();
+            verifyTodoList();
+        });
+    };
 
     // let add_button = document.getElementById("addTodo");
     // add_button.onclick = saveData;
@@ -17,6 +62,8 @@ document.addEventListener("DOMContentLoaded", () => {
     //     localStorage.setItem("neuToDo", input.value);
     //     var storedValue = localStorage.getItem("neuToDo");
     // }
+
+    addTodo.addEventListener("click", handleButtonClick);
 
     function handleButtonClick() {
         if (newTodo.value !== "") {
@@ -42,9 +89,11 @@ document.addEventListener("DOMContentLoaded", () => {
             const jsonToDoList = JSON.stringify(m_todoList);
             localStorage.setItem("todoList", jsonToDoList);
 
+            toDoText.classList.add("todoText");
             toDoText.innerText = newTodo.value;
 
             inputCheckbox.type = "checkbox";
+            inputCheckbox.classList.add("checkInput");
 
             divContainer.classList.add("divToDo");
             liElement.classList.add("liElement");
@@ -53,14 +102,18 @@ document.addEventListener("DOMContentLoaded", () => {
             divButton.appendChild(deleteBtn);
 
             divContainer.appendChild(inputCheckbox);
+
             divContainer.appendChild(toDoText);
             divContainer.appendChild(divButton);
 
             liElement.appendChild(divContainer);
-            console.log(liElement);
-            todoList.appendChild(liElement);
+
+            doneDeletetask(liElement);
+
+            todoList.prepend(liElement);
 
             newTodo.value = "";
+            verifyTodoList();
         }
     }
 

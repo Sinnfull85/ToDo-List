@@ -39,6 +39,7 @@ header p {
 
 .todoText {
     color: blue;
+    font-family: blod;
     width: 50%;
 }
 .divButton {
@@ -79,4 +80,45 @@ header p {
     border: 0px;
     pointer-events: none;
     padding: 15px;
+}
+
+.todoList li.completed label.todoText {
+    color: #d9d9d9;
+    text-decoration: line-through;
+}
+
+/* .todoList li.completed label.todoText {
+    background-color: rgb(38, 0, 255);
+    width: 1200px;
+} */
+
+.divFilter {
+    display: flex;
+    justify-content: space-between;
+}
+
+.filters {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    position: absolute;
+    right: 0;
+    left: 0;
+}
+
+.filters li {
+    display: inline;
+}
+
+.filters li a {
+    color: inherit;
+    margin: 3px;
+    padding: 3px 7px;
+    text-decoration: none;
+    border: 1px solid transparent;
+    border-radius: 3px;
+}
+
+.filters li a:hover {
+    border-color: rgba(168, 159, 223, 0.1);
 }
