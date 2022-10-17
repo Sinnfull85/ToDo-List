@@ -1,3 +1,8 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
 body {
     font-family: "Courier New", Courier, monospace;
 }
@@ -15,15 +20,30 @@ header p {
     background-color: aliceblue;
     display: flex;
     justify-content: space-around;
-    width: 600px;
+    width: 800px;
     margin: 1px auto;
 }
 
-.divToDo li {
+/* .divToDo li {
     background-color: rgb(199, 118, 13);
     width: 50%;
     height: 100%;
     list-style: none;
+} */
+
+.liElement {
+    width: 50%;
+    height: 100%;
+    list-style: none;
+}
+
+.todoText {
+    color: blue;
+    width: 50%;
+}
+.divButton {
+    display: flex;
+    align-items: center;
 }
 .edit {
     background-color: rgb(65, 237, 94);
@@ -31,11 +51,6 @@ header p {
 
 .delete {
     background-color: red;
-}
-
-.divButton {
-    display: flex;
-    align-items: center;
 }
 
 .edit {

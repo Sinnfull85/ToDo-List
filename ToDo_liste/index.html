@@ -27,17 +27,32 @@
 
 
 
-        <div id="App">
+        <section id="App">
             <div id="add-section" style="text-align:center ;margin:20px;">
-                <input id="addInput" type="text" placeholder="Aufgabe Titel">
+                <input id="neuTodo" type="text" placeholder="Aufgabe Titel">
                 <!-- FÜR SPÄTER -->
                 <!-- <input id="details" type="text" placeholder="Mehr Details">
                     <input id="datetime" type="datetime" placeholder="Datum/Uhrzeit"> -->
-                <button id="AddButton">Hinzufügen</button>
+                <button id="addTodo">Hinzufügen</button>
             </div>
+            <ul id="todoList">
+
+                <li class="liElement">
+                    <div class="divToDo">
+                        <input class="checkInput" type="checkbox" checked>
+                        <label class="todoText">Taste JavaScript</label>
+                        <div>
+                            <button class="edit">Bearbeiten</button>
+                            <button class="delete">Löschen</button>
+                        </div>
+                    </div>
+
+                </li>
+
+            </ul>
 
 
-        </div>
+        </section>
 
 
 
@@ -107,9 +122,10 @@
 
 </body>
 <!--JAVASCRIPT MODULE-->
-<script src="js/add.js"></script>
+<script src="js/main.js"> </script>
+<!-- <script src="js/add.js"></script>
 <script src="js/delete.js"></script>
 <script src="js/done.js"></script>
-<script src="js/edit.js"></script>
+<script src="js/edit.js"></script> -->
 
 </html>
