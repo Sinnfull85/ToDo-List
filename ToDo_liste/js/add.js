@@ -47,11 +47,11 @@ function handleButtonClick() {
     editBtn.setAttribute("class", "edit");
     deleteBtn.setAttribute("class", "delete");
 
-    editBtn.innerHTML = "Bearbeiten";
-    deleteBtn.innerHTML = "Löschen";
+    editBtn.innerHTML = "";
+    deleteBtn.innerHTML =<i class="fa fa-trash" aria-hidden="true"></i>;
 
-    // editBtn.setAttribute("id", "mv-edit-2");
-    // deleteBtn.setAttribute("id", "mv-delete-2");
+     editBtn.setAttribute("id", "mv-edit-2");
+     deleteBtn.setAttribute("id", "mv-delete-2");
 
     liAlsInput.value = inputList[inputList.length - 1];
 

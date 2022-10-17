@@ -22,6 +22,8 @@ document.addEventListener("DOMContentLoaded", () => {
         if (newTodo.value !== "") {
             const liElement = document.createElement("li");
             const divContainer = document.createElement("div");
+            //setAttribute für id um max-width zu bestimmmen.
+            //Buttons at the end
 
             const inputCheckbox = document.createElement("input");
             const toDoText = document.createElement("label");
@@ -30,8 +32,8 @@ document.addEventListener("DOMContentLoaded", () => {
             const editBtn = document.createElement("button");
             const deleteBtn = document.createElement("button");
 
-            deleteBtn.innerHTML = "Löschen";
-            editBtn.innerHTML = "Bearbeiten";
+            deleteBtn.innerHTML = "<div class='fa'>&#xf014;</div>";
+            editBtn.innerHTML = "<div class='fa'>&#xf142;</div>";     
             deleteBtn.classList.add("delete");
             editBtn.classList.add("edit");
 
