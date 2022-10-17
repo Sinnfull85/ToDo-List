@@ -9,3 +9,4 @@ document.addEventListener("click", function (e) {
         parent.remove();
     }
 });
+

@@ -5,9 +5,29 @@
 
 body {
     font-family: "Courier New", Courier, monospace;
+    font-family: 'Montserrat', sans-serif;
+
 }
 
-header,
+header{
+    background-color: #37c6f6;
+    background-color: #00BFFF;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Oswald', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    height:15vh;
+    text-align: center;
+}
+header h1{
+    padding-top:3%;
+    padding-bottom:2%;
+}
+#date,h2{
+    float:left;
+    margin:20px;
+    display: block;
+}
+
 #App {
     text-align: center;
 }
@@ -19,9 +39,11 @@ header p {
 .divToDo {
     background-color: aliceblue;
     display: flex;
-    justify-content: space-around;
-    width: 800px;
+    justify-items: center;
+
+    width: 100%;
     margin: 1px auto;
+
 }
 
 /* .divToDo li {
@@ -32,7 +54,8 @@ header p {
 } */
 
 .liElement {
-    width: 50%;
+    width: 90%;
+    text-align: center;
     height: 100%;
     list-style: none;
 }
@@ -79,4 +102,46 @@ header p {
     border: 0px;
     pointer-events: none;
     padding: 15px;
+}
+
+#neuTodo{
+    width: 85%;
+    border-radius:5px;
+    padding:8px;
+    border: 1px solid grey;
+    background-color: #EFECEC;
+    padding-left:10vw;
+    font-size: 16px;
+
+}
+
+#addTodo{
+    padding:5px;
+    margin-left: 7%;
+    margin-right:10px;
+    border-radius:50%;
+    border:1px solid white;
+    background-color: rgb(114, 234, 255) ;
+    border:1px solid black;
+    cursor: pointer;
+}
+#addTodo:hover{
+    background-color: rgb(208, 238, 251);
+    border:1px solid black;
+
+}
+
+#add-section{
+    display:flex;
+    flex-direction: row;
+}
+
+button i{
+    margin:5px;
+    font-size:1.1rem;
+}
+
+button{
+    margin:5px;
+    
 }

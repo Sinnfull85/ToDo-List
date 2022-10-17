@@ -6,6 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<script src="https://kit.fontawesome.com/e82f145924.js" crossorigin="anonymous"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Oswald:wght@700&family=Roboto:wght@100&display=swap" rel="stylesheet">
     <title>ToDO-Liste</title>
 </head>
 
@@ -13,23 +17,26 @@
 
 
     <header>
-        <h1>ToDo-Liste</h1>
-        <p>WochenProjekt#3 "ToDo-Liste" , Gruppe 3: Marwa, Andreas und Denis. -WBS Coding School WDG007, Instructor
+        <h1>TO DO List</h1>
+        <p>WochenProjekt#3 "To Do List" , Gruppe 3: Marwa, Andreas und Denis. -WBS Coding School WDG007, Instructor
             "Peter Wolf"</p>
 
     </header>
     <main>
-
+        <div id="date">Dienstag, 11 Oktober 2022</div>
+        <br style="margin-bottom:25px;">
         <section id="App">
-            <div id="add-section" style="text-align:center ;margin:20px;">
-                <input id="neuTodo" name="neuToDo" type="text" placeholder="Aufgabe Titel">
+            <div id="add-section" style="text-align:center ;margin:50px;">
+                <input id="neuTodo" name="neuToDo" type="text" placeholder="Aufgabe hinzufügen"> 
                 <!-- FÜR SPÄTER -->
                 <!-- <input id="details" type="text" placeholder="Mehr Details">
                     <input id="datetime" type="datetime" placeholder="Datum/Uhrzeit"> -->
                 <!-- <button onclick="save_data()" id="addTodo" value="addToDo" type="button">Hinzufügen</button> -->
-                <button id="addTodo" value="addToDo" type="button">Hinzufügen</button> -->
+                <button id="addTodo" value="addToDo" type="button"><i class="fa-light fa-plus"></i></i> </button>
+                
             </div>
             <ul id="todoList">
+                <h2>Aufgabe</h2>
 
                 <li class="liElement">
                     <div class="divToDo">
