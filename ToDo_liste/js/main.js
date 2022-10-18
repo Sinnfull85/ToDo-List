@@ -7,6 +7,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const divFilter = document.querySelector(".divFilter");
     const todoCountElement = document.querySelector(".todoCount strong");
+    const completetTodoCountElement = document.querySelector(
+        ".completedTodoCount strong"
+    );
 
     let m_todoList = [{ name: "Javascript lernen" }];
 
@@ -26,6 +29,15 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         }
         todoCountElement.innerText = todoCounter;
+
+        let completettodoCounter = 0;
+        for (const item of todoList.children) {
+            // console.log(item.classList.contains("completed")); //return true oder false
+            if (item.classList.contains("completed")) {
+                completettodoCounter++;
+            }
+        }
+        completetTodoCountElement.innerText = completettodoCounter;
     };
 
     verifyTodoList();
