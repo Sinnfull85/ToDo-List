@@ -1,3 +1,4 @@
+/* ********************** Start Allgemain Eigenschaft*******************/
 * {
     margin: 0;
     padding: 0;
@@ -5,10 +6,23 @@
 
 body {
     font-family: "Courier New", Courier, monospace;
+    font-family: "Montserrat", sans-serif;
+    overflow-x: none;
+    overflow-x: auto;
+    min-width: 350px;
+    max-width: 100%;
 }
 
-header,
-#App {
+/* ------------------------- Ende Allgemain Eigenschaft--------------------- */
+
+/* ********************* Start Header Bereich *******************/
+header {
+    background-color: #37c6f6;
+    background-color: #00bfff;
+    font-family: "Montserrat", sans-serif;
+    font-family: "Oswald", sans-serif;
+    font-family: "Roboto", sans-serif;
+    height: 20vh;
     text-align: center;
 }
 
@@ -16,42 +30,101 @@ header p {
     font-style: italic;
 }
 
-.divToDo {
-    background-color: aliceblue;
+header h1 {
+    padding-top: 3%;
+    padding-bottom: 2%;
+}
+/* wir haben kein h2 hier vieleicht wird gelöcht TODO */
+#date,
+h2 {
+    float: left;
+    margin: 20px;
+    display: block;
+}
+
+header p {
+    font-style: italic;
+}
+/* -------------------------Ende Header Bereich--------------------- */
+
+/* ********************* Start Main Bereich *********************/
+/* #App vieleicht wird gelöcht TODO */
+#App {
+    text-align: center;
+}
+/* ++++ Begin add-section ++++*/
+#addTodo i {
+    padding: 0px 10px;
+}
+
+/* ---- Ende add-section ----*/
+
+/* ++++ Begin TODO ++++*/
+#addTodo i {
+    padding: 0px 10px;
+}
+
+.liElement {
+    max-width: 70%;
+    height: 100%;
+    padding: 5px;
+    text-align: left;
+    list-style: none;
+}
+/* Marwa*/
+/* .divToDo {
+    background-color: rgba(5, 104, 190, 0.773);
     display: flex;
     justify-content: space-around;
     width: 800px;
     margin: 1px auto;
-}
-
-/* .divToDo li {
-    background-color: rgb(199, 118, 13);
-    width: 50%;
-    height: 100%;
-    list-style: none;
 } */
 
-.liElement {
-    width: 50%;
-    height: 100%;
-    list-style: none;
-}
+/*Denis*/
+.divToDo {
+    background-color: rgb(203, 230, 253);
+    margin-left: 20px;
+    display: flex;
+    justify-items: center;
 
+    width: 100%;
+    height: 50px;
+    margin: 10px auto;
+    margin: auto;
+    padding: 10px;
+}
 .todoText {
     color: blue;
-    font-family: blod;
+    font-family: blod; /* Marwa */
     width: 50%;
 }
-.divButton {
+/*Marwa*/
+/* .divButton {
     display: flex;
     align-items: center;
+} */
+/*Denis*/
+.divButton {
+    display: flex;
+    display: block;
+    float: right;
 }
+/*Marwa*/
 .edit {
     background-color: rgb(65, 237, 94);
 }
 
+/*Denis*/
+.edit {
+    background-color: rgb(65, 237, 94);
+    margin: 0px 10px;
+    border-radius: 3px;
+    border: 1px solid black;
+    padding: 5px;
+}
+
 .delete {
-    background-color: red;
+    background-color: rgb(255, 60, 60); /*Denis*/
 }
 
 .edit {
@@ -59,38 +132,231 @@ header p {
     margin-right: 10px;
 }
 
-.divToDo ul,
-.divToDo li {
+/*Löchen*/
+/* .divToDo {
     background-color: antiquewhite;
     margin: 10px;
-    width: 50%;
+    width: 90%;
     margin: auto;
     height: 50px;
-}
+    max-width: 90vw; 
+} */
 
 .divToDO {
     background-color: aliceblue;
-    height: 1000px;
-    width: 600px;
+
+    height: auto;
+    width: 90%;
 }
 
-.li-als-input {
+/* edit button function TODO*/
+/* .li-als-input {
     background-color: transparent;
     color: black;
     border: 0px;
     pointer-events: none;
     padding: 15px;
-}
+} */
 
 .todoList li.completed label.todoText {
     color: #d9d9d9;
     text-decoration: line-through;
 }
 
-/* .todoList li.completed label.todoText {
-    background-color: rgb(38, 0, 255);
-    width: 1200px;
-} */
+/*Denis*/ /*TODO */
+#neuTodo {
+    width: 85%;
+    min-width: 200px;
+    border-radius: 5px;
+    padding: 8px;
+    border: 1px solid grey;
+    background-color: #efecec;
+    padding-left: 10vw;
+    font-size: 16px;
+}
+
+#addTodo {
+    padding: 5px;
+    margin-left: 7%;
+    margin-right: 10px;
+    border-radius: 50%;
+    border: 1px solid white;
+    background-color: rgb(114, 234, 255);
+    /* border: 1px solid black; */ /*Löchen TODO*/
+    cursor: pointer;
+}
+#addTodo:hover {
+    background-color: rgb(208, 238, 251);
+    border: 1px solid black;
+}
+
+#add-section {
+    display: flex;
+    flex-direction: row;
+}
+
+button i {
+    /* margin: 5px; */
+    font-size: blod;
+}
+
+.edit {
+    background-color: rgba(65, 237, 94, 0.423);
+    /* margin: 0px 10px;   */ /*Löchen TODO*/
+    border-radius: 50%;
+    border: 1px solid black;
+    width: 25px;
+    height: 25px;
+}
+
+.edit div {
+    display: flex;
+}
+.edit:hover {
+    background-color: rgb(34, 118, 48);
+    color: white;
+}
+
+.delete {
+    background-color: rgb(255, 84, 84);
+    border-radius: 50%;
+    border: 1px solid black;
+    width: 25px;
+    height: 25px;
+}
+.delete:hover {
+    background-color: rgb(106, 17, 17);
+    color: white;
+}
+
+.divButton {
+    display: flex;
+    align-items: center;
+    display: block;
+    float: right;
+}
+
+button {
+    float: right;
+    cursor: pointer;
+}
+
+#buttons {
+    margin-left: 20%;
+    float: right;
+}
+
+.divButton {
+    justify-content: space-around;
+    position: absolute;
+    right: 30px;
+}
+
+li.fa {
+    background-color: none;
+    margin-bottom: 0px;
+}
+
+.delete-all {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid black;
+    cursor: pointer;
+    background-color: rgb(251, 126, 126);
+    color: black;
+    margin: 15% 10%;
+}
+
+.delete-all:hover {
+    color: white;
+    background-color: rgb(100, 27, 27);
+}
+
+/* Customize the label (the container) */
+
+.container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Create a custom checkbox */
+/* TODO */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+}
+/*Hier nochmal schauen*/
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+    background-color: #2196f3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+ul#todoList {
+    text-align: center;
+    margin: auto;
+}
+
+li.liElement {
+    margin: auto;
+}
+
+li {
+    list-style-type: disc;
+}
+/* ---- Ende TODO ----*/
+
+/* -------------------------Ende Main Bereich--------------------- */
 
 .divFilter {
     display: flex;
@@ -98,6 +364,7 @@ header p {
 }
 
 .filters {
+    text-align: center;
     margin: 0;
     padding: 0;
     list-style: none;

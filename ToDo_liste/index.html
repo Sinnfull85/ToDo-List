@@ -6,31 +6,43 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/styles.css">
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://kit.fontawesome.com/e82f145924.js" crossorigin="anonymous"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Oswald:wght@700&family=Roboto:wght@100&display=swap"
+        rel="stylesheet">
     <title>ToDO-Liste</title>
 </head>
 
 <body>
-
-
     <header>
         <h1>ToDo-Liste</h1>
-        <p>WochenProjekt#3 "ToDo-Liste" , Gruppe 3: Marwa, Andreas und Denis. -WBS Coding School WDG007, Instructor
-            "Peter Wolf"</p>
-
+        <p>WochenProjekt#3 "ToDo-Liste" <br>Gruppe 3: <strong>Andreas</strong>, <strong>Denis</strong>,
+            <strong>Marwa</strong> <br>
+            <small>-WBS Coding School WDG007 </small>, Instructor
+            <strong>Peter Wolf</strong> ""
+        </p>
     </header>
-    <main>
 
+    <main>
+        <div id="date">Dienstag, 11 Oktober 2022</div>
+        <br style="margin-bottom:25px;">
         <section id="App">
             <div id="add-section" style="text-align:center ;margin:20px;">
                 <input id="neuTodo" name="neuToDo" type="text" placeholder="Aufgabe Titel">
-                <!-- FÜR SPÄTER -->
-                <!-- <input id="details" type="text" placeholder="Mehr Details">
-                    <input id="datetime" type="datetime" placeholder="Datum/Uhrzeit"> -->
-                <!-- <button onclick="save_data()" id="addTodo" value="addToDo" type="button">Hinzufügen</button> -->
-                <button id="addTodo" value="addToDo" type="button">Hinzufügen</button>
+                <!-- diese button wird später gelöcht TODO  -->
+                <!-- <button id="addTodo" value="addToDo" type="button">Hinzufügen</button>  -->
+                <button id="addTodo" value="addToDo" type="button"><i class="fa-light fa-plus"></i> </button>
+
             </div>
+            <h2>Aufgabe</h2>
             <ul id="todoList" class="todoList">
 
+
+                <!-- diese button wird später gelöcht TODO  -->
                 <!-- <li class="liElement completed">
                     <div class="divToDo">
                         <input class="checkInput" type="checkbox" checked>
@@ -41,7 +53,7 @@
                         </div>
                     </div>
 
-                </li> -->
+                    </li> -->
 
             </ul>
 
@@ -50,83 +62,18 @@
                 <ul class="filters">
 
                     <li>
-                        <a class="completedTodoCount" href="#/completed">Completed : <strong>0</strong></a>
+                        <a class="completedTodoCount" href="#">Completed : <strong>0</strong></a>
                     </li>
                 </ul>
             </div>
-
-
-
-
         </section>
-
-
-
-
-
-        <!-- <div class="mv-todo" id="mv-todo-1">
-
-            <ul class="mv-ul">
-
-                <li>Einkaufen
-                    <details>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor, ratione!</details>
-                    <div id="date">Datum:</div>
-                </li>
-            </ul>
-            <div class="divButton>
-                <button class=" mv-edit" id="mv-edit-1">Bearbeiten</button>
-                <button class="mv-delete" id="mv-delete-1">Löschen</button>
-            </div>
-
-        </div>
-        <div class="mv-todo" id="mv-todo-2">
-            <ul class="mv-ul">
-                <li>Kochen
-                    <details id="details-">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae,
-                        repellat?</details>
-                    <div id="date">Datum:</div>
-                </li>
-
-            </ul>
-            <div class="divButton">
-                <button class="mv-edit" id="mv-edit-2">Bearbeiten</button>
-                <button class="mv-delete" id="mv-delete-2">Löschen</button>
-            </div>
-
-
-
-        </div> -->
-
-
-
-
-
-
-
-
-
-
-
-
     </main>
 
-
-
-
-
-
     <footer>
-
-
-
-
-
-
-
-
     </footer>
 
 </body>
+
 <!--JAVASCRIPT MODULE-->
 <script src="js/main.js"> </script>
 <!-- <script src="js/add.js"></script>

@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
         ".completedTodoCount strong"
     );
 
-    let m_todoList = [{ name: "Javascript lernen" }];
+    let m_todoList = [];
 
     const verifyTodoList = () => {
         if (todoList.children.length === 0) {
@@ -87,12 +87,27 @@ document.addEventListener("DOMContentLoaded", () => {
 
             const divButton = document.createElement("div");
             const editBtn = document.createElement("button");
+            const editIcon = document.createElement("div");
             const deleteBtn = document.createElement("button");
+            const deleteIcon = document.createElement("div");
 
-            deleteBtn.innerHTML = "Löschen";
-            editBtn.innerHTML = "Bearbeiten";
-            deleteBtn.classList.add("delete");
+            // deleteBtn.innerHTML = "Löschen";
+            // editBtn.innerHTML = "Bearbeiten";
+            // const editIcontext = "&#xf142;";
+            // const deleteIcontext = "&#xf014;";
+
+            editIcon.classList.add("fa");
+            editIcon.classList.add("fa-edit");
+            // editIcon.innerText = editIcontext;
             editBtn.classList.add("edit");
+            editBtn.appendChild(editIcon);
+
+            deleteIcon.classList.add("fa");
+            deleteIcon.classList.add("fa-trash-o");
+
+            // deleteBtn.innerText = deleteIcontext;
+            deleteBtn.classList.add("delete");
+            deleteBtn.appendChild(deleteIcon);
 
             //Local speicher
             const todoElement = { name: newTodo.value };
@@ -102,6 +117,8 @@ document.addEventListener("DOMContentLoaded", () => {
             localStorage.setItem("todoList", jsonToDoList);
 
             toDoText.classList.add("todoText");
+            toDoText.classList.add("container");
+
             toDoText.innerText = newTodo.value;
 
             inputCheckbox.type = "checkbox";
@@ -110,8 +127,8 @@ document.addEventListener("DOMContentLoaded", () => {
             divContainer.classList.add("divToDo");
             liElement.classList.add("liElement");
 
-            divButton.appendChild(editBtn);
             divButton.appendChild(deleteBtn);
+            divButton.appendChild(editBtn);
 
             divContainer.appendChild(inputCheckbox);
 
