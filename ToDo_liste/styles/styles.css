@@ -112,6 +112,10 @@ header p {
 /*Marwa*/
 .edit {
     background-color: rgb(65, 237, 94);
+    margin: 0px 10px;
+    border-radius:3px;
+    border: 1px solid black;
+    padding:5px;
 }
 
 /*Denis*/
@@ -121,6 +125,20 @@ header p {
     border-radius: 3px;
     border: 1px solid black;
     padding: 5px;
+=======
+.mv-delete {
+    background-color: red;
+    border-radius:3px;
+    border: 1px solid black;
+    padding:5px;
+}
+.mv-delete:hover {
+    background-color: rgb(106, 17, 17);
+    color:white;
+}
+.mv-edit:hover {
+    background-color:  rgb(34, 118, 48);
+    color:white;
 }
 
 .delete {
@@ -236,14 +254,12 @@ button i {
     float: right;
 }
 
-button {
-    float: right;
-    cursor: pointer;
-}
 
 #buttons {
     margin-left: 20%;
     float: right;
+    float:right;
+    cursor:pointer;
 }
 
 .divButton {
@@ -396,4 +412,17 @@ li {
 
 #deleteCompleted {
     padding: 7px;
+}
+}
+
+input{
+    width:100%;
+    padding:10px;
+}
+
+#add-section{
+    margin:auto;
+    width:40%;
+    display: flex;
+    justify-content: flex-end;
 }
