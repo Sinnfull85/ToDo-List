@@ -389,3 +389,11 @@ li {
 .filters li a:hover {
     border-color: rgba(168, 159, 223, 0.1);
 }
+
+#deleteAllButton {
+    padding: 7px;
+}
+
+#deleteCompleted {
+    padding: 7px;
+}

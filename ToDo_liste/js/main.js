@@ -11,6 +11,8 @@ document.addEventListener("DOMContentLoaded", () => {
         ".completedTodoCount strong"
     );
 
+    const deleteCompletedElement = document.querySelector("#deleteCompleted");
+
     let m_todoList = [];
 
     const verifyTodoList = () => {
@@ -38,6 +40,14 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         }
         completetTodoCountElement.innerText = completettodoCounter;
+        console.log("Hallo ", completettodoCounter);
+
+        if (completettodoCounter === 0) {
+            console.log(deleteCompletedElement);
+            deleteCompletedElement.style.display = "none";
+        } else {
+            deleteCompletedElement.style.display = "";
+        }
     };
 
     verifyTodoList();
@@ -48,22 +58,42 @@ document.addEventListener("DOMContentLoaded", () => {
         // console.log("liElement", liElement.innerText);
 
         checkboxElement.addEventListener("change", () => {
-            // console.log("changed!");
             if (checkboxElement.checked) {
                 liElement.classList.add("completed");
-                // console.log("liElement", liElement);
-                verifyTodoList();
             } else {
                 liElement.classList.remove("completed");
-                // console.log("remove completed liElement", liElement);
-                verifyTodoList();
             }
+            verifyTodoList();
         });
 
         deleteButtonElement.addEventListener("click", () => {
             liElement.remove();
             verifyTodoList();
         });
+
+        if (todoList.children.length > 0) {
+            console.log("todoList.children.length ", todoList.children.length);
+            const deleteAllButtonElement =
+                document.querySelector("#deleteAllButton");
+            // deleteAllButtonElement.style.display = "";
+            console.log(deleteAllButtonElement);
+
+            deleteAllButtonElement.addEventListener("click", () => {
+                for (let item of todoList.children) {
+                    item.remove();
+                    verifyTodoList();
+                }
+            });
+        }
+
+        let completettodoCounter = 0;
+        for (const item of todoList.children) {
+            // console.log(item.classList.contains("completed")); //return true oder false
+            if (item.classList.contains("completed")) {
+                completettodoCounter++;
+            }
+        }
+        console.log("completettodoCounter", completettodoCounter);
     };
 
     // let add_button = document.getElementById("addTodo");
@@ -137,9 +167,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
             liElement.appendChild(divContainer);
 
-            doneDeletetask(liElement);
-
             todoList.prepend(liElement);
+            doneDeletetask(liElement);
 
             newTodo.value = "";
             verifyTodoList();
@@ -150,5 +179,14 @@ document.addEventListener("DOMContentLoaded", () => {
         if (newTodo.value !== "") {
             console.log(newTodo.value);
         }
+    });
+
+    deleteCompletedElement.addEventListener("click", (event) => {
+        const completedLiElements = todoList.querySelectorAll("li.completed");
+        for (const completedLiElement of completedLiElements) {
+            completedLiElement.remove();
+        }
+
+        verifyTodoList();
     });
 });
