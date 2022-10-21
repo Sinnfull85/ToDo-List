@@ -71,6 +71,17 @@ document.addEventListener("DOMContentLoaded", () => {
             verifyTodoList();
         });
 
+        const editBtn = document.querySelector(".edit");
+        const editIcon = documenr.querySelector("fa-edit");
+        console.log("HIHI", editBtn);
+        if (editBtn) {
+            editBtn.addEventListener("click", (event) => {
+                if (editIcon.class === "fa-edit") {
+                    console.log(editIcon.class);
+                }
+            });
+        }
+
         if (todoList.children.length > 0) {
             console.log("todoList.children.length ", todoList.children.length);
             const deleteAllButtonElement =
@@ -181,21 +192,12 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    const editBtn = document.querySelector(".edit");
-    console.log(editBtn);
-
-    editBtn.addEventListener("click", (event) => {
-        if (editIcon.class === "fa-edit") {
-            console.log(editIcon.class);
-        }
-    });
-
     deleteCompletedElement.addEventListener("click", (event) => {
         const completedLiElements = todoList.querySelectorAll("li.completed");
         for (const completedLiElement of completedLiElements) {
             completedLiElement.remove();
         }
-
+        console.log("FFFFFFFF");
         verifyTodoList();
     });
 });
