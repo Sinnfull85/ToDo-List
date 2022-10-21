@@ -113,7 +113,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const divContainer = document.createElement("div");
 
             const inputCheckbox = document.createElement("input");
-            const toDoText = document.createElement("label");
+            const toDoText = document.createElement("input");
 
             const divButton = document.createElement("div");
             const editBtn = document.createElement("button");
@@ -126,12 +126,14 @@ document.addEventListener("DOMContentLoaded", () => {
             // const editIcontext = "&#xf142;";
             // const deleteIcontext = "&#xf014;";
 
+            editIcon.classList.add("editIcon");
             editIcon.classList.add("fa");
             editIcon.classList.add("fa-edit");
             // editIcon.innerText = editIcontext;
             editBtn.classList.add("edit");
             editBtn.appendChild(editIcon);
 
+            deleteIcon.classList.add("deleteIcon");
             deleteIcon.classList.add("fa");
             deleteIcon.classList.add("fa-trash-o");
 
@@ -148,8 +150,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
             toDoText.classList.add("todoText");
             toDoText.classList.add("container");
+            toDoText.type = "text";
+            toDoText.setAttribute("readonly", "readonly");
 
-            toDoText.innerText = newTodo.value;
+            toDoText.value = newTodo.value;
 
             inputCheckbox.type = "checkbox";
             inputCheckbox.classList.add("checkInput");
@@ -171,6 +175,7 @@ document.addEventListener("DOMContentLoaded", () => {
             doneDeletetask(liElement);
 
             newTodo.value = "";
+            editTask();
             verifyTodoList();
         }
     }
@@ -181,21 +186,29 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    const editBtn = document.querySelector(".edit");
-    console.log(editBtn);
-
-    editBtn.addEventListener("click", (event) => {
-        if (editIcon.class === "fa-edit") {
-            console.log(editIcon.class);
-        }
-    });
-
     deleteCompletedElement.addEventListener("click", (event) => {
         const completedLiElements = todoList.querySelectorAll("li.completed");
         for (const completedLiElement of completedLiElements) {
             completedLiElement.remove();
         }
-
         verifyTodoList();
     });
+
+    function editTask() {
+        const editIcon = document.querySelector(".editIcon");
+        const toDoText = document.querySelector(".todoText");
+
+        editIcon.addEventListener("click", (event) => {
+            if (editIcon.classList.contains("fa-edit")) {
+                editIcon.classList.remove("fa-edit");
+                editIcon.classList.add("fa-save");
+                toDoText.removeAttribute("readonly");
+                toDoText.focus();
+            } else {
+                editIcon.classList.remove("fa-save");
+                editIcon.classList.add("fa-edit");
+                toDoText.setAttribute("readonly", "readonly");
+            }
+        });
+    }
 });
