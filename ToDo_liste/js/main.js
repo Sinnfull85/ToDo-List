@@ -181,6 +181,15 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
+    const editBtn = document.querySelector(".edit");
+    console.log(editBtn);
+
+    editBtn.addEventListener("click", (event) => {
+        if (editIcon.class === "fa-edit") {
+            console.log(editIcon.class);
+        }
+    });
+
     deleteCompletedElement.addEventListener("click", (event) => {
         const completedLiElements = todoList.querySelectorAll("li.completed");
         for (const completedLiElement of completedLiElements) {
